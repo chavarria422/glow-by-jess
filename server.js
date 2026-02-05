@@ -55,7 +55,7 @@ app.post('/create-checkout-session', async (req, res) => {
 });
 
 // SPA Fallback for production
-app.get('*', (req, res) => {
+app.get(/.*/, (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
