@@ -210,7 +210,7 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({ cart, status, onClose, on
                                         quantity: item.quantity || 1
                                     }));
 
-                                    const response = await fetch('http://localhost:4242/create-checkout-session', {
+                                    const response = await fetch('/create-checkout-session', {
                                         method: 'POST',
                                         headers: {
                                             'Content-Type': 'application/json',
